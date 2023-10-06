@@ -6,21 +6,21 @@ id_pattern = re.compile(r'^.\d+$')
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-API_ID = int(os.environ.get("API_ID", "28839759"))
+API_ID = int(os.environ.get("API_ID", ""))
 
-API_HASH = os.environ.get("API_HASH", "c5ec8c471ec25acc97db0f5089c7a63a")
+API_HASH = os.environ.get("API_HASH", "")
 
 PICS = os.environ.get("PICS", "https://telegra.ph/file/34fd203eb89fd747ffb57.jpg").split()
 
-ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1737202396').split()]
+ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://filebotxds:filebotxds@clusterxds07.yl5t1nk.mongodb.net/?retryWrites=true&w=majority")
+DB_URL = os.environ.get("DB_URL", "")
 
 DB_NAME = os.environ.get("DB_NAME", "tg-multiuse-bot")
 
 RemoveBG_API = os.environ.get("RemoveBG_API", "")
 
-FORCE_SUB = os.environ.get("FORCE_SUB", "-1001597165437")           
+FORCE_SUB = os.environ.get("FORCE_SUB", None)           
 
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
  
